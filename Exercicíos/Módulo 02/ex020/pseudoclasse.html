@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p{
+            display: none;
+        }
+        
+        div:hover > p{
+            display: block;
+            
+        }
+
+        div:hover{
+            background-color: azure;
+        }
+        
+        .especial{
+            background-color: lightgray;
+            text-align: center;
+            border: 1px solid black;
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="especial">01</div>
+
+    <div class="especial">02</div>
+    
+    <div class="especial">03</div>
+
+    <div id="01">
+        Passe o mouse aqui
+        <p>Olá, bonitão!</p>
+    </div>
+
+</body>
+</html>

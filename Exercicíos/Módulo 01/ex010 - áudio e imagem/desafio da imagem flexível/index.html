@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    <p>Para aumentar a imagem basta aumentar o navegador.</p>
+
+        <!-- Se a foto G tiver entrando depois e criando a barra de rolagem aumenta o px da foto M. E assim tbm fazer com a M e P-->
+    <picture>
+        <source media="(max-width: 525px)" srcset="images/img-p.png" type="image/png">
+        <source media="(max-width: 715px)" srcset="images/img-m.png" type="image/png">
+        <img src="images/img-g.png" alt="Foto do batismo">
+    </picture>
+</body>
+</html>

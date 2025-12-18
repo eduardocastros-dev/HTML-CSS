@@ -175,31 +175,44 @@ body {
     margin-bottom: 40px;
 }
 
+/* Carrosel Pai */
 .carousel-wrapper {
+    margin: 100px auto;
     width: 100%;
     display: flex;
     overflow: hidden;
+
+    overflow-x: auto;
+}
+/* Remove a barra de rolagem do carrossel */
+.carousel-wrapper::-webkit-scrollbar{
+    display: none;
 }
 
-.carousel-track {
+/* Carrosel filho (track) */
+.carousel-grupo {
     display: flex;
     width: max-content; /* A largura se adapta ao conteúdo */
     gap: 20px; /* Espaço entre as fotos */
-    animation: scroll 20s linear infinite; /* Animação contínua */
+    animation: spin 40s infinite linear; /* Animação contínua */
+    padding-right: 1em; /* Espaço extra no final para suavizar a transição */
 }
 
 /* Pausar a animação quando passar o mouse em cima */
-.carousel-track:hover {
+.carousel-grupo:hover {
     animation-play-state: paused;
 }
 
+/* Fotos */
 .memory-card {
-    min-width: 250px; /* Largura fixa para cada cartão */
+    flex: 0 0 5em; /* Garante que os cartões não encolham ou cresçam */
+
+    min-width: 250px;  /* Largura fixa para cada cartão */
     max-width: 250px;
     background: var(--card-bg);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.185);
     transition: transform 0.3s ease;
 }
 
@@ -221,15 +234,18 @@ body {
     font-style: italic;
 }
 
-/* A mágica do infinito */
-@keyframes scroll {
-    0% {
+/* A mágica do infinito (scroll) */
+@keyframes spin {
+    /* 0% {
         transform: translateX(0);
     }
     100% {
         /* Move para a esquerda exatamente 50% da largura total (já que duplicamos as fotos) */
-        transform: translateX(-50%); 
-    }
+        /* transform: translateX(-50%); 
+    } */
+
+    from {translate: 0;}
+    to {translate: -50%;}
 }
 
 /* =========================================

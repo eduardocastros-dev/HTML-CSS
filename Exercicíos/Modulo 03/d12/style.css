@@ -11,6 +11,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -57,10 +58,15 @@ section{
     font-size: 2.8vw;
 }
 
+section > p{
+    padding-bottom: 2em;
+}
+
 section.imagem > p{
-    background-color: rgba(0, 0, 0, 0.164);
+    background-color: rgba(0, 0, 0, 0.616);
     display: inline-block;
-    padding: 7px
+    padding: 7px;
+    text-shadow: 1px 2px 0px black;
     /* width: 400px; */
 }
 
@@ -70,8 +76,21 @@ section.normal{
 }
 
 section.imagem{
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.521);
     background-color: rgb(43, 43, 43);
     color: white;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#img01{
+    background-image: url(imagens/fundo001.jpg);
+    background-position: right center;
+}
+
+#img02{
+    background-image: url(imagens/fundo002.jpg);
+    background-position: bottom center;
 }
 
 footer{

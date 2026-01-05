@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Testes com formulário</h1>
+     <form action="cadastro.php" method="post" autocomplete="on">
+         <fieldset>
+            <legend>Dados Pessoais</legend>
+             <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required autocomplete="name" minlength="5" maxlength="20" placeholder="Digite seu nome">
+                <input type="reset" value="Limpar">
+             </p>
+             <p>
+                <label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="Digite seu email">
+                <input type="reset" value="Limpar">
+             </p>
+             <p>
+                <label for="itelefone">Telefone:</label>
+                <input type="tel" name="telefone" id="itelefone" autocomplete="tel" placeholder="(xx)xxxx-xxxx">
+                <input type="reset" value="Limpar">
+             </p>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Dados Acadêmicos</legend>
+                <p>
+                    <label for="imedia">Média:</label>
+                    <input type="number" name="media" id="imedia" required step="0.1" min="0" max="10" value="5.0">
+                    <input type="reset" value="Limpar">
+                </p>
+                <p>
+                    <label for="iletivo">Ano letivo:</label>
+                    <input type="month" name="letivo" id="iletivo" required value="2026-01">
+                </p>
+                <p>
+                    <label for="idia">Dia do seu nascimento:</label>
+                    <input type="date" name="dia" id="idia" required value="2000-01-01">
+                </p>
+            </fieldset>
+
+            <p>
+               <input type="submit" value="Enviar">
+            </p>
+     </form>
+</body>
+</html>

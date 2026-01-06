@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Moradia</legend>
+            <p>
+                <label for="selecione">Estado:</label>
+                <select name="sele" id="selecione">
+                    <option value="">Selecione um Estado</option>
+                    <optgroup label="Região Norte">
+                        <option value="PA">Pará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="CE">Ceára</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PB">Paraíba</option>
+                    </optgroup>
+
+                    <optgroup label="Região Sudeste">
+                        <option value="PE">Pernambuco</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="BA">Bahia</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Profissão</legend>
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lista">
+
+                <datalist id="lista">
+                    <option>Professor</option>
+                    <option>Engenheiro</option>
+                    <option>Desenvolvedor</option>
+                    <option>Estudante</option>
+                    <option>Contator</option>
+                    <option>Pastor</option>
+                </datalist>
+            </p>
+        </fieldset>
+        
+            <textarea name="texto" id="descrição"></textarea>
+        
+        
+        
+        
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>

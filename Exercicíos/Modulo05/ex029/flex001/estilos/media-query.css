@@ -1,8 +1,19 @@
 @charset 'UTF-8';
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 580px) {
     main{
-        width: 768px;
-
+        width: 85vw;
+        text-align: justify;
+    }
+    header, header > nav{
+        flex-flow: column nowrap;  
+        display: flex;
+        justify-content: center;
+    }
+    header > h1{
+        flex-basis: 50px; 
+    }
+    header > nav > a{
+        width: 50vw;
     }
 }
